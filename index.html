@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вислови авторів</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .quote {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Натисніть на кнопку, щоб побачити вислів автора</h1>
+    <button onclick="showQuote('aitmatov')">Ч. Айтматов</button>
+    <button onclick="showQuote('holbach')">П. Гольбах</button>
+    <button onclick="showQuote('shevchenko')">Т. Шевченко</button>
+    <button onclick="showQuote('pavlychko')">Д. Павличко</button>
+    <button onclick="showQuote('kostenko')">Л. Костенко</button>
+
+    <div id="quote" class="quote"></div>
+
+    <script>
+        function showQuote(author) {
+            let quotes = {
+                aitmatov: "Той, хто в біді кидає свій народ, стає його ворогом.",
+                holbach: "Природа завжди діє в інтересах власних законів.",
+                shevchenko: "Борітеся — поборете, вам Бог помагає!",
+                pavlychko: "Немає правди у людині, яка неправдою живе.",
+                kostenko: "Моя свобода завжди була зі мною, навіть коли мене саджали у тюрму."
+            };
+            document.getElementById('quote').innerText = quotes[author];
+        }
+    </script>
+</body>
+</html>
